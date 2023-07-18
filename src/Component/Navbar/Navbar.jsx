@@ -37,10 +37,10 @@ export default function Navbar({userData , logOut}) {
             :''}
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item d-flex text-white me-2">
-                <a className="nav-link text-white" href='#'><i className='fab fa-facebook'></i></a>
-                <a className="nav-link text-white" href='#'><i className='fab fa-spotify'></i></a>
-                <a className="nav-link text-white" href='#'><i className='fab fa-instagram'></i></a>
-                <a className="nav-link text-white" href='#'><i className='fab fa-youtube'></i></a>
+                <a className="nav-link text-white" href='https://www.facebook.com/profile.php?id=100009042109024' target='_blank' rel="noreferrer"><i className='fab fa-facebook'></i></a>
+                <a className="nav-link text-white" href='https://www.instagram.com/ahmedmos3add/' target='_blank' rel="noreferrer"><i className='fab fa-instagram'></i></a>
+                <a className="nav-link text-white" href='https://www.linkedin.com/in/ahmedmosaadd/' target='_blank' rel="noreferrer"><i className='fab fa-linkedin'></i></a>
+                <a className="nav-link text-white" href='https://github.com/Mos3addev' target='_blank' rel="noreferrer"><i className='fab fa-github'></i></a>
               </li>
               {userData?
               <li className="nav-item">
