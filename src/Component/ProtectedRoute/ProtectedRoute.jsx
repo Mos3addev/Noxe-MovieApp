@@ -1,4 +1,3 @@
-import { Navigate } from 'react-router-dom'
 import Login from './../Login/Login';
 
 export default function ProtectedRoute({userData, children,saveUserData}) {

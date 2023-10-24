@@ -19,7 +19,7 @@ export default function Register() {
   })
   async function sendUserDataToApi(){
     let {data} = await axios.post(`https://movies-api.routemisr.com/signup`,user);
-    if(data.message == 'success'){
+    if(data.message === 'success'){
       setLoading(false);
       navigate('/login');
     }
@@ -84,7 +84,7 @@ export default function Register() {
 
         <label htmlFor='password'>Password :</label>
         <input onChange={getUserData} className="form-control my-input my-2" type="Password" name='password' id='password'/>   
-        {errorList.map((error,index)=>{
+        {errorList.map((error,index) =>{
         if(error.context.label === 'password'){
           return <p key={index} className='text-danger'>{errorList.filter((error)=>error.context.label ==="password")[0]?.message}</p>
         }})}

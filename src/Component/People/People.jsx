@@ -1,10 +1,15 @@
-import { useContext } from "react";
+import { useEffect } from "react";
 import MediaItem from "../MediaItem/MediaItem";
-import { context } from "../../Context/Context";
+import { useDispatch, useSelector } from "react-redux";
+import { getTrending } from "../../Redux/moviesSlice";
 
 export default function People() {
-  let { trendingPerson } = useContext(context);
-
+  // let { trendingPerson } = useContext(context);
+  let {trendingPerson }=useSelector((state)=>state.movie)
+  let dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getTrending('person'))
+  }, [])
   return (
     <div className="row">
       <div className="col-md-4 d-flex align-items-center">

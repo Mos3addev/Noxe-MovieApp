@@ -15,6 +15,8 @@ import MovieDetails from "./Component/MovieDetails/MovieDetails";
 import jwtDecode from "jwt-decode";
 import { useEffect, useState } from 'react';
 import { createBrowserRouter , Navigate, RouterProvider } from "react-router-dom"
+import { Provider } from "react-redux";
+import store from "./Redux/Store";
 
 export default function App(){
   useEffect(()=>{
@@ -51,5 +53,8 @@ export default function App(){
         ]
     }
   ])
-  return <RouterProvider router={routers}/>
+  return <Provider store={store}>
+    <RouterProvider router={routers}/>
+  </Provider>
+  
 }

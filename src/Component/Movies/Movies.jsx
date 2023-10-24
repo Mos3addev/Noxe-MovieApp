@@ -1,9 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import MediaItem from "../MediaItem/MediaItem";
 import { context } from "../../Context/Context";
+import { useDispatch, useSelector } from "react-redux";
+import { getTrending } from "../../Redux/moviesSlice";
 
 export default function Movies() {
-  let { trendingMovies } = useContext(context);
+  let {trendingMovies }=useSelector((state)=>state.movie)
+  let dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(getTrending('movie'))
+  }, [])
 
   return (
     <div className="row">
