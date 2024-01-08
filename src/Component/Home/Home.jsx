@@ -21,7 +21,7 @@ return <>
       <div className='col-md-4 d-flex align-items-center'>
         <div>
           <div className='brdrLine w-25 mb-3'></div>
-          <h1>Counter :{counter}</h1>
+          {/* <h1>Counter :{counter}</h1> */}
           <h4>Name :{userName}</h4>
           <h2 className='h4'>Trending Movies <br /> To Watch Right Now</h2>
           <p className='textMuted py-3'>Most watched Movies by Days</p>
